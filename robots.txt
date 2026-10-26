@@ -1,0 +1,6 @@
+# Robots.txt for Sne's Gourmet Table Fine Catering Website
+User-agent: *
+Allow: /
+
+# Sitemap Location Link for Crawlers
+Sitemap: https://netlify.app
