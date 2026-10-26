@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Sne's Gourmet Table</title>
+    
+    <!-- Core SEO Meta Tags -->
+    <title>Gourmet Event Catering Services | Sne's Gourmet Table</title>
+    <meta name="description" content="Explore luxury catering services by Sne's Gourmet Table. We provide bespoke menus, private chef services, corporate event catering, and wedding packages across South Africa.">
+    <meta name="keywords" content="catering services, private chef, wedding catering, corporate event food, fine dining setups, boutique catering company">
+    <meta name="author" content="Sne's Gourmet Table">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Luxury Event Catering Services | Sne's Gourmet Table">
+    <meta property="og:description" content="Every occasion, perfectly catered. Filter through our bespoke luxury hospitality packages.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/og-services-preview.jpg">
+
     <!-- Google Fonts Links -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -23,22 +36,22 @@
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="services.html" class="active-nav">Services</a>
+            <a href="services.html" class="active-nav" aria-current="page">Services</a>
             <a href="menu.html">Menu</a>
             <a href="testimonials.html">Testimonials</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <a href="contact.html" class="btn-consultation">Book a consultation</a>
+        <a href="enquiry.html" class="btn-consultation">Book a consultation</a>
     </header>
 
     <!-- Services Section -->
     <main class="services-section">
         <header class="services-header">
             <div class="header-left">
-                <h2 class="services-title">
+                <h1 class="services-title">
                     Every occasion, <br>
                     <span class="italic-text">perfectly catered.</span>
-                </h2>
+                </h1>
             </div>
             <div class="header-right">
                 <p class="services-intro">
@@ -47,11 +60,19 @@
             </div>
         </header>
 
+        <!-- Dynamic Content Controls (Part 3 - Section 2.2 Alignment) -->
+        <nav class="filter-controls" aria-label="Filter catering options">
+            <button class="filter-btn active" data-filter="all">ALL SERVICES</button>
+            <button class="filter-btn" data-filter="private">INTIMATE GATHERINGS</button>
+            <button class="filter-btn" data-filter="corporate">PROFESSIONAL OCCASIONS</button>
+            <button class="filter-btn" data-filter="wedding">YOUR SPECIAL DAY</button>
+        </nav>
+
         <!-- Section 3.3: Optimized Responsive Image Grids Pointing to Local .jpeg Files -->
-        <div class="services-grid">
+        <div class="services-grid" id="servicesGrid">
             
             <!-- Card 1: Intimate Gatherings -->
-            <article class="service-card">
+            <article class="service-card" data-category="private">
                 <div class="card-image-wrapper">
                     <picture>
                         <source srcset="./images/intimate-gathering.jpeg" media="(min-width: 769px)">
@@ -62,11 +83,11 @@
                              class="card-image">
                     </picture>
                 </div>
-                <h3 class="card-title">INTIMATE GATHERINGS</h3>
+                <h2 class="card-title">INTIMATE GATHERINGS</h2>
             </article>
 
             <!-- Card 2: Professional Occasions -->
-            <article class="service-card">
+            <article class="service-card" data-category="corporate">
                 <div class="card-image-wrapper">
                     <picture>
                         <source srcset="./images/professional-event.jpeg" media="(min-width: 769px)">
@@ -77,11 +98,11 @@
                              class="card-image">
                     </picture>
                 </div>
-                <h3 class="card-title">PROFESSIONAL OCCASIONS</h3>
+                <h2 class="card-title">PROFESSIONAL OCCASIONS</h2>
             </article>
 
             <!-- Card 3: Your Special Day -->
-            <article class="service-card">
+            <article class="service-card" data-category="wedding">
                 <div class="card-image-wrapper">
                     <picture>
                         <source srcset="./images/wedding-day.jpeg" media="(min-width: 769px)">
@@ -92,7 +113,7 @@
                              class="card-image">
                     </picture>
                 </div>
-                <h3 class="card-title">YOUR SPECIAL DAY</h3>
+                <h2 class="card-title">YOUR SPECIAL DAY</h2>
             </article>
             
         </div>
