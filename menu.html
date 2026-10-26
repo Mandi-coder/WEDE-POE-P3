@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | Sne's Gourmet Table</title>
+    
+    <!-- Core SEO Meta Tags -->
+    <title>Gourmet Catering Menus | Sne's Gourmet Table Fine Dining Options</title>
+    <meta name="description" content="Explore our seasonal, bespoke catering menus. From seared duck breast starters to Karoo lamb mains and local South African dessert delicacies curated by Sne's Gourmet Table.">
+    <meta name="keywords" content="catering menu, gourmet dishes, private dining packages, wedding menus, Karoo lamb recipe, milk tart dessert, fine dining culinary options">
+    <meta name="author" content="Sne's Gourmet Table">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Optimization -->
+    <meta property="og:title" content="Bespoke Gourmet Catering Menus | Sne's Gourmet Table">
+    <meta property="og:description" content="Discover exquisite culinary craft with our bespoke menus, built with intention and served with love.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/og-menu-preview.jpg">
+
     <!-- Google Fonts Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -24,63 +37,67 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="menu.html" class="active-nav">Menu</a>
+            <a href="menu.html" class="active-nav" aria-current="page">Menu</a>
             <a href="testimonials.html">Testimonials</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <a href="contact.html" class="btn-consultation">Book a consultation</a>
+        <a href="enquiry.html" class="btn-consultation">Book a consultation</a>
     </header>
 
     <!-- Menu Section -->
     <main class="menu-section">
         <header class="menu-header">
             <p class="menu-sub">OUR SELECTION</p>
-            <h2 class="menu-title">Catering Excellence Menus</h2>
-            <!-- Filter Tabs linked to script.js -->
-            <div class="menu-tabs">
-                <button class="tab-btn active" data-category="starters">Starters</button>
-                <button class="tab-btn" data-category="mains">Mains</button>
-                <button class="tab-btn" data-category="desserts">Desserts</button>
-            </div>
+            <h1 class="menu-title">Catering Excellence Menus</h1>
+            
+            <!-- Dynamic Tab Navigation (Part 3 - Section 2.1 & 2.2 UI Control) -->
+            <nav class="menu-tabs" aria-label="Menu categories">
+                <button class="tab-btn active" data-category="starters" aria-expanded="true" aria-controls="starters">Starters</button>
+                <button class="tab-btn" data-category="mains" aria-expanded="false" aria-controls="mains">Mains</button>
+                <button class="tab-btn" data-category="desserts" aria-expanded="false" aria-controls="desserts">Desserts</button>
+            </nav>
         </header>
 
         <!-- Starters Category Wrapper -->
-        <div id="starters" class="menu-category-group active-category">
+        <section id="starters" class="menu-category-group active-category" aria-hidden="false">
+            <h2 class="visually-hidden">Starter Dishes</h2>
             <div class="menu-grid">
                 <article class="menu-item-card">
-                    <h4>Seared Duck Breast</h4>
+                    <h3>Seared Duck Breast</h3>
                     <p>Served with wild fig reduction and crisp seasonal micro greens.</p>
                 </article>
                 <article class="menu-item-card">
-                    <h4>Rooibos Smoked Salmon</h4>
+                    <h3>Rooibos Smoked Salmon</h3>
                     <p>Paired smoothly with whipped avocado mousse and pickled cucumber ribbons.</p>
                 </article>
             </div>
-        </div>
+        </section>
 
         <!-- Mains Category Wrapper -->
-        <div id="mains" class="menu-category-group">
+        <section id="mains" class="menu-category-group" aria-hidden="true">
+            <h2 class="visually-hidden">Main Dishes</h2>
             <div class="menu-grid">
                 <article class="menu-item-card">
-                    <h4>Karoo Lamb Cutlets</h4>
+                    <h3>Karoo Lamb Cutlets</h3>
                     <p>Herb-crusted roasted cutlets served alongside sweet root vegetable purée.</p>
                 </article>
                 <article class="menu-item-card">
-                    <h4>Sustainably Sourced Linefish</h4>
+                    <h3>Sustainably Sourced Linefish</h3>
                     <p>Pan-fried crisp and finished beautifully with a velvety saffron broth reduction.</p>
                 </article>
             </div>
-        </div>
+        </section>
 
         <!-- Desserts Category Wrapper -->
-        <div id="desserts" class="menu-category-group">
+        <section id="desserts" class="menu-category-group" aria-hidden="true">
+            <h2 class="visually-hidden">Dessert Dishes</h2>
             <div class="menu-grid">
                 <article class="menu-item-card">
-                    <h4>Deconstructed Milk Tart</h4>
+                    <h3>Deconstructed Milk Tart</h3>
                     <p>Cinnamon pastry shards nested gracefully in a rich vanilla bean custard base.</p>
                 </article>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
