@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sne | Sne's Gourmet Table</title>
+    
+    <!-- Core SEO Meta Tags -->
+    <title>About Sne Chonco | Founder & Head Chef of Sne's Gourmet Table</title>
+    <meta name="description" content="Meet Chef Sne Chonco, founder of Sne's Gourmet Table. Learn about her culinary training at Capsicum Culinary Studio and her passion for bespoke South African catering services.">
+    <meta name="keywords" content="Sne Chonco, private chef Durban, Capsicum Culinary Studio graduate, professional chef South Africa, luxury caterer background, farm-to-table culinary heritage">
+    <meta name="author" content="Sne's Gourmet Table">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Sharing Optimization -->
+    <meta property="og:title" content="About Sne Chonco | Founder & Head Chef of Sne's Gourmet Table">
+    <meta property="og:description" content="Discover the passion, culinary tradition, and professional expertise behind our premium catering excellence since 2016.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/chef-cooking.jpeg">
+
     <!-- Google Fonts Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -22,13 +35,13 @@
         </div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active-nav">About</a>
+            <a href="about.html" class="active-nav" aria-current="page">About</a>
             <a href="services.html">Services</a>
             <a href="menu.html">Menu</a>
             <a href="testimonials.html">Testimonials</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <a href="contact.html" class="btn-consultation">Book a consultation</a>
+        <a href="enquiry.html" class="btn-consultation">Book a consultation</a>
     </header>
 
     <!-- About Section -->
@@ -36,24 +49,21 @@
         <!-- Section 3.3: Optimized Responsive Image Using Picture Element pointing to local file -->
         <div class="about-image-container">
             <picture>
-                <!-- Desktop Viewport Image Resolution Reference -->
                 <source srcset="./images/chef-cooking.jpeg" media="(min-width: 769px)">
-                <!-- Bandwidth-optimized resource layout provided for tablet/mobile viewports -->
                 <source srcset="./images/chef-cooking.jpeg" media="(max-width: 768px)">
-                <!-- Fallback local image setup matching sizes attribute layout instructions -->
                 <img src="./images/chef-cooking.jpeg" 
                      sizes="(max-width: 768px) 100vw, 50vw" 
-                     alt="Sne Chonco cooking in the kitchen" 
+                     alt="Chef Sne Chonco preparing fine dining dishes in the kitchen" 
                      class="about-image">
             </picture>
         </div>
         
         <div class="about-content">
             <p class="about-sub">ABOUT SNE</p>
-            <h2 class="about-title">
+            <h1 class="about-title">
                 A passion for food <br>
                 <span class="italic-text">rooted in tradition.</span>
-            </h2>
+            </h1>
             <p class="about-paragraph">
                 Sne Chonco grew up watching her grandmother transform simple ingredients into feasts that gathered family from across the province. That early wonder never left her. After training at the Capsicum Culinary Studio and honing her craft in kitchens across Johannesburg and London, she founded Sne's Gourmet Table in 2016.
             </p>
