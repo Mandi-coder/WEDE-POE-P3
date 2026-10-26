@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Core SEO Meta Tags -->
+    <title>Catering Service Booking Enquiry | Sne's Gourmet Table</title>
+    <meta name="description" content="Calculate baseline cost estimates and submit a customized catering service package enquiry with Sne's Gourmet Table for your boutique private events or corporate functions.">
+    <meta name="keywords" content="catering enquiry, event cost calculator, book private chef, wedding catering rates, custom menu quotes Durban">
+    <meta name="author" content="Sne's Gourmet Table">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media Optimization -->
+    <meta property="og:title" content="Catering Service Booking Enquiry | Sne's Gourmet Table">
+    <meta property="og:description" content="Use our instant custom booking enquiry form to calculate pricing tiers and reserve event dates.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/og-enquiry-preview.jpg">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <span class="brand-name">Sne's Gourmet Table</span>
+                <span class="tagline">CATERING EXCELLENCE</span>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="menu.html">Menu</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="enquiry.html" class="btn-consultation active-nav" aria-current="page">Book a consultation</a>
+    </header>
+
+    <!-- Enquiry Section -->
+    <main class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <p class="contact-sub">PLAN YOUR BUDGET</p>
+                <h1 class="contact-title">Bespoke Event<br>Cost Estimator.</h1>
+                <p class="contact-description">
+                    Select your hospitality package and estimated guest count below. Our engine will dynamically process standard baseline tier rates for your review.
+                </p>
+                <div class="info-details-list">
+                    <div class="info-item">
+                        <span class="info-icon" aria-hidden="true">✨</span>
+                        <span><strong>Intimate Gatherings:</strong> R450 per head baseline</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon" aria-hidden="true">💼</span>
+                        <span><strong>Professional Occasions:</strong> R350 per head baseline</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon" aria-hidden="true">🥂</span>
+                        <span><strong>Your Special Day:</strong> R650 per head baseline</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Wrapper matching Part 3 Specs (Dynamic Calculator Node Interactivity) -->
+            <div class="contact-form-wrapper">
+                <form class="consultation-form" id="enquiryForm">
+                    <div class="form-row-2col">
+                        <div class="form-group">
+                            <label for="enquiry-name">YOUR NAME</label>
+                            <input type="text" id="enquiry-name" placeholder="Sipho Khumalo" required minlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiry-phone">PHONE NUMBER</label>
+                            <input type="text" id="enquiry-phone" placeholder="e.g. 0825550136" required pattern="^[0-9]{10}$" title="Please enter a valid 10-digit South African mobile phone number.">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="enquiry-service">DESIRED CATERING SERVICE</label>
+                        <select id="enquiry-service" required>
+                            <option value="" disabled selected>Choose a package service...</option>
+                            <option value="intimate">Intimate Gathering (Private Dinner)</option>
+                            <option value="professional">Professional Occasion (Corporate Event)</option>
+                            <option value="wedding">Your Special Day (Wedding Banquet)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-guests">EXPECTED ATTENDANCE COUNTS</label>
+                        <input type="number" id="enquiry-guests" placeholder="e.g. 25" required min="1" max="1000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-date">PROPOSED EVENT DATE</label>
+                        <input type="date" id="enquiry-date" required>
+                    </div>
+
+                    <!-- Dynamic layout display placeholder badge injected by script.js calculation engine -->
+                    <div id="enquiryFeedback" class="form-feedback-msg" style="display: none;"></div>
+
+                    <button type="submit" class="btn-submit">
+                        Calculate Estimate & Submit <span class="arrow" aria-hidden="true">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
